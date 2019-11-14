@@ -1,0 +1,10 @@
+input {
+  width:2em;
+}
+
+p {
+  padding: 3px;
+}
+#colorbox {
+  border: 4px dashed black;
+}
