@@ -31,10 +31,13 @@ function printItemInBox() {
   // add a new paragraph for each time a button color is clicked
   var total = 0;
   for (var i = 0; i < items.length; i++) {
-    box.innerHTML += "<p>"  + "(" + quantity[i] + ") " + items[i] + " " + prices[i] + "</p>";
+    box.innerHTML += "<p>"  + "(" + quantity[i] + ") " + items[i] + " $" + prices[i] + "</p>";
     total += prices[i] * quantity[i];
   }
+  var tax = total * 0.06;
+  box.innerHTML += "<p>Subtotal $" + total.toFixed(2); + "</p>";
+  box.innerHTML += "<p>Tax $" + tax.toFixed(2); + "</p>";
+  total = tax + total;
   box.innerHTML += "<p>Total $" + total.toFixed(2); + "</p>";
-
 
 }
